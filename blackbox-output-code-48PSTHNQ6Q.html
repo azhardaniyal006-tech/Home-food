@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghar ka Khana 🍱 - Fresh Home Made Food</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f9f9f9; color: #333; }
+        header { text-align: center; background-color: #ffcc00; padding: 20px; border-radius: 10px; }
+        h1 { margin: 0; }
+        .menu-section { margin: 20px 0; }
+        .menu-section h2 { cursor: pointer; background-color: #e0e0e0; padding: 10px; border-radius: 5px; }
+        .menu-section ul { list-style: none; padding: 0; display: none; }
+        .menu-section ul li { padding: 5px 0; border-bottom: 1px solid #ddd; }
+        .price { float: right; font-weight: bold; }
+        footer { text-align: center; margin-top: 40px; padding: 20px; background-color: #333; color: white; border-radius: 10px; }
+        @media (max-width: 600px) { body { padding: 10px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ghar ka Khana 🍱</h1>
+        <p>Fresh and healthy home made food</p>
+    </header>
+
+    <section class="menu-section">
+        <h2 onclick="toggleSection('parathas')">Parathas & Rotis</h2>
+        <ul id="parathas">
+            <li>Sada Roti <span class="price">30 PKR</span></li>
+            <li>Chaki Ata Roti <span class="price">40 PKR</span></li>
+            <li>Chaki Ata Paratha <span class="price">90 PKR</span></li>
+            <li>Simple Paratha <span class="price">80 PKR</span></li>
+            <li>Chicken Paratha <span class="price">320 PKR</span></li>
+            <li>Chicken Cheese Paratha <span class="price">350 PKR</span></li>
+            <li>Aloo Paratha <span class="price">280 PKR</span></li>
+            <li>Aloo Cheese Paratha <span class="price">320 PKR</span></li>
+        </ul>
+    </section>
+
+    <section class="menu-section">
+        <h2 onclick="toggleSection('curries')">Curries & Gravies</h2>
+        <ul id="curries">
+            <li>Lahori Chanay <span class="price">280 PKR</span></li>
+            <li>Chicken Korma <span class="price">450 PKR</span></li>
+            <li>Chicken Achari <span class="price">450 PKR</span></li>
+            <li>Chicken Qoftay <span class="price">380 PKR</span></li>
+            <li>Qofta Chanay <span class="price">420 PKR</span></li>
+            <li>Lal Lobia <span class="price">280 PKR</span></li>
+            <li>Daal Mash <span class="price">280 PKR</span></li>
+            <li>Chanay Salan <span class="price">280 PKR</span></li>
+            <li>Chicken Chanay <span class="price">320 PKR</span></li>
+            <li>Mix Sabzi <span class="price">280 PKR</span></li>
+            <li>Chicken Mix Sabzi <span class="price">320 PKR</span></li>
+        </ul>
+    </section>
+
+    <section class="menu-section">
+        <h2 onclick="toggleSection('rice')">Rice & Pulao</h2>
+        <ul id="rice">
+            <li>Chanay Chawal <span class="price">450 PKR</span></li>
+            <li>Aloo Matar Pulao <span class="price">450 PKR</span></li>
+            <li>Vegetable Pulao <span class="price">480 PKR</span></li>
+            <li>Chicken Pulao <span class="price">480 PKR</span></li>
+            <li>Yellow Dal Chawal <span class="price">400 PKR</span></li>
+            <li>Lobia White Chawal <span class="price">400 PKR</span></li>
+        </ul>
+    </section>
+
+    <section class="menu-section">
+        <h2 onclick="toggleSection('burgers')">Burgers & Rolls</h2>
+        <ul id="burgers">
+            <li>Zinger Burger <span class="price">450 PKR</span></li>
+            <li>Chicken Boti Burger <span class="price">400 PKR</span></li>
+            <li>Anda Shami Burger <span class="price">300 PKR</span></li>
+            <li>Chicken Shuarma <span class="price">280 PKR</span></li>
+            <li>Zinger Shuarma <span class="price">350 PKR</span></li>
+            <li>Chicken Tikka Roll Paratha <span class="price">300 PKR</span></li>
+            <li>Zinger Roll Paratha <span class="price">350 PKR</span></li>
+        </ul>
+    </section>
+
+    <section class="menu-section">
+        <h2 onclick="toggleSection('pasta')">Pasta & Fries</h2>
+        <ul id="pasta">
+            <li>Chicken Macaronies <span class="price">450 PKR</span></li>
+            <li>Chicken Vegetables Macaronies <span class="price">500 PKR</span></li>
+            <li>Aloo Samosa <span class="price">60 PKR</span></li>
+            <li>Mix Pakory <span class="price">280 PKR</span></li>
+            <li>Aloo Pakory <span class="price">280 PKR</span></li>
+            <li>Loaded Fries <span class="price">500 PKR</span></li>
+            <li>Crunchy Pasta <span class="price">500 PKR</span></li>
+            <li>White Sauce Pasta <span class="price">500 PKR</span></li>
+            <li>Plain Fries <span class="price">180 PKR</span></li>
+            <li>Mayo Ketchup Fries <span class="price">200 PKR</span></li>
+        </ul>
+    </section>
+
+    <section class="menu-section">
+        <h2 onclick="toggleSection('chats')">Chats</h2>
+        <ul id="chats">
+            <li>Samosa Chat <span class="price">350 PKR</span></li>
+            <li>Dahe Bhalay <span class="price">300 PKR</span></li>
+            <li>Chana Chat (Dahi) <span class="price">300 PKR</span></li>
+            <li>Chana Chat (Imli) <span class="price">300 PKR</span></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>For create your own demand menu</p>
+        <p>Contact: <a href="https://wa.me/03335917827" target="_blank">03335917827 (WhatsApp only)</a> | 03358309124</p>
+    </footer>
+
+    <script>
+        function toggleSection(id) {
+            const ul = document.getElementById(id);
+            ul.style.display = ul.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
